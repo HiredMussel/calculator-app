@@ -1,6 +1,7 @@
 $main-background: #045866;
 $mayden-font: 'Asap', 'Sans Serif';
 $main-foreground: #ecfbfc;
+$mayden-button-color: #8d0377;
 
 * {
     box-sizing: border-box;
@@ -19,6 +20,14 @@ body {
             background-color: $main-foreground;
             font-size: 1.8em;
             color: $main-background;
+
+            form {
+                input[type="submit"] {
+                    background-color: $mayden-button-color;
+                    color: white;
+                    margin-top: 1em;
+                }
+            }
         }
     }
 }
