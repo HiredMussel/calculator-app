@@ -1,11 +1,25 @@
-$mayden-background: #045866;
-$mayden-font: 'Aria, Sans Serif';
+$main-background: #045866;
+$mayden-font: 'Asap', 'Sans Serif';
+$main-foreground: #ecfbfc;
 
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
     font-family: $mayden-font;
 
     main {
-        background-color: $mayden-background;
-        height: 100vh;
+        background-color: $main-background;
+
+        .col-12 {
+            margin-top: 2em;
+            padding: 1em;
+            background-color: $main-foreground;
+            font-size: 1.8em;
+            color: $main-background;
+        }
     }
 }
+

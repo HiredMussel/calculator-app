@@ -10,10 +10,47 @@
         <link rel="stylesheet" href="dist/css/styles.css">
     </head>
     <body>
-        <main class="container-fluid">
-            <div class="row">
-                <div class="col-10">
+        <main>
+            <div class="container">
+                <div class="row light">
+                    <div class="col-12">
+                        <h1>Loan Calculator</h1>
+                        
+                        <p> 
+                            For those who don't want to pay the cost of the course up front, there is the 
+                            possibility of an interest-free loan from EdAid to cover some or all of the cost 
+                            of the course.<br>
+                            <br>
+                            You may borrow any amount up to the total cost of the course (£8,000). EdAid charge
+                            a 5% administrative fee which will be added to the total amount you repay.<br>
+                            <br>
+                            In addition, an extra fee is charged if you borrow more than a certain amount. If you
+                            intend to borrow more than 80% of the course's cost (£6,400), then the total cost of
+                            the course is increased to £8,500.<br>
+                            <br>
+                            If you borrow over 90% of the cost of the course (£7,200), then the total cost of the 
+                            course is £9,000.<br>
+                            <br>
+                            Repayments are made as a percentage of annual salary. At least 10% of your monthly salary
+                            must go towards repaying the cost of the course, starting from three months after your
+                            graduation. There is no minimum income threshold before this applies.<br>
+                            <br>
+                            Payments are made on the 1st of each month, and there is no maximum number of months for
+                            a student to pay back the cost of the course.
+                        </p>
 
+                        <form>
+                            <div class="form-group">
+                                <label for="amountToBorrow">Amount to Borrow:</label>
+                                <input type="text" class="form-control" name="amountToBorrow" id="amountToBorrow">
+                                <label for="estimatedSalary">Estimated Monthly Salary (£):</label>
+                                <input type="text" class="form-control" name="estimatedSalary" id="estimatedSalary">
+                            </div>
+                        </form>
+
+                        <div id="output-div"></div>
+                        
+                    </div>
                 </div>
             </div>
         </main>
