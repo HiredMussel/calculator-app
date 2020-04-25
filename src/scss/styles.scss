@@ -2,6 +2,7 @@ $main-background: #045866;
 $mayden-font: 'Asap', 'Sans Serif';
 $main-foreground: #ecfbfc;
 $mayden-button-color: #8d0377;
+$mayden-hover-color: #d64405;
 
 * {
     box-sizing: border-box;
@@ -26,9 +27,18 @@ body {
                     background-color: $mayden-button-color;
                     color: white;
                     margin-top: 1em;
+                    transition: 0.3s;
+                    border: none;
+
+                    &:hover {
+                        background-color: $mayden-hover-color;
+                    }
                 }
+            }
+
+            .alert {
+                margin-top: 1em;
             }
         }
     }
 }
-

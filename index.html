@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Mayden Finance Calculator</title>
-        <script src="dist/js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+        <script src="dist/js/script.js" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="dist/css/styles.css">
@@ -21,7 +22,7 @@
                             possibility of an interest-free loan from EdAid to cover some or all of the cost 
                             of the course.<br>
                             <br>
-                            You may borrow any amount up to the total cost of the course (£8,000). EdAid charge
+                            You may borrow any amount up to the total cost of the course (£8,000). There is
                             a 5% administrative fee which will be added to the total amount you repay.<br>
                             <br>
                             In addition, an extra fee is charged if you borrow more than a certain amount. If you
@@ -42,14 +43,25 @@
                         <form>
                             <div class="form-group">
                                 <label for="amountToBorrow">Amount to Borrow:</label>
-                                <input type="text" class="form-control" name="amountToBorrow" id="amountToBorrow">
+                                <input type="number" class="form-control" name="amountToBorrow" id="amountToBorrow">
+                                <div class="alert alert-danger borrowValidationFail d-none">
+                                    This means validation on the amount to borrow has failed
+                                </div>
                                 <label for="estimatedSalary">Estimated Monthly Salary (£):</label>
                                 <input type="text" class="form-control" name="estimatedSalary" id="estimatedSalary">
+                                <div class="alert alert-danger salaryValidationFail d-none">
+                                    This means validation on the expected monthly salary has failed
+                                </div>
+                                <label for="percToRepay">Percentage of monthly salary to repay (minimum 10%):</label>
+                                <input type="text" class="form-control" name="percToRepay" id="percToRepay">
+                                <div class="alert alert-danger repayValidationFail d-none">
+                                    This means validation on amount to repay per month has failed
+                                </div>
                                 <input type="submit" id="calcLoan" name="calculate" value="Calculate">
                             </div>
                         </form>
 
-                        <div id="output-div"></div>
+                        <div id="outputDiv"></div>
 
                     </div>
                 </div>
